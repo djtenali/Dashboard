@@ -3,6 +3,8 @@ on:
   workflow_run:
     workflows:
       - Workflow-1
+    types: 
+    - completed
 jobs:
     job1:
         runs-on: ubuntu-latest
