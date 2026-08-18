@@ -1,13 +1,9 @@
- Path filters
+Path ignore
 on:
     push:
-      branches: 
-        - main
-      paths:
-        - 'src/**'
-        - Dockerfile
-        - pom.xml
-jobs:
+      paths-ignore:
+        - README.md
+        - docs/**
     show-information:
         name: Push triggered info
         runs-on: ubuntu-latest
