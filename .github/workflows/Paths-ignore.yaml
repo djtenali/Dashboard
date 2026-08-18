@@ -1,9 +1,10 @@
-Path ignore
+name: Path ignore
 on:
     push:
       paths-ignore:
         - README.md
         - docs/**
+jobs:
     show-information:
         name: Push triggered info
         runs-on: ubuntu-latest
