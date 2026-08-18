@@ -1,0 +1,32 @@
+name: Runners-Specs
+on:
+  workflow_dispatch:
+jobs:
+    runners-specs:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Runner Context Info
+            run: |
+              echo "==============================="
+              echo "Runner Context Info"
+              echo "==============================="
+              echo "OS:              ${{ runner.os}}"
+              echo "Architecture:    ${{ runner.arch}}"
+              echo "Workspace:       ${{ runner.workspace}}"
+          - name: Machine Specifications
+            run: |
+              echo "=============================="
+              echo " Machine Specifications"
+              echo "=============================="
+              echo "CPU:             $(lscpu | grep 'Model name' | awk -F ':' '{print $2}' | xargs)" 
+              echo "Cores:           $(nproc)"
+              echo "Memory           $(free -h | awk '/^Mem:/ {print $2}')"
+              echo "Disk Space       $( df -h / | awk 'NR==2 {print $4}')"
+          - name: Pre Installed Software
+            run: |
+              echo "=============================="
+              echo " Pre Installed Software "
+              echo "=============================="
+              echo "Docker Version:  $(docker --version)"
+              echo "Node Version:    $(node --version)"
+              echo "Python Version:  $(python3 --version)"
