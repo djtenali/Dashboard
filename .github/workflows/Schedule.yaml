@@ -1,0 +1,11 @@
+name: Schedule Event
+on:
+    schedule: 
+        - cron: '*/5 * * * *'
+jobs:
+    schedule-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Print Schedule Information
+            run: echo " Using schedule event.."
+
