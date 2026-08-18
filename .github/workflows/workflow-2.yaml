@@ -1,0 +1,11 @@
+name: Workflow-2
+on:
+  workflow_run:
+    workflows:
+      - Workflow-1
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Printing 
+          run: echo "This workflow is triggered beacause Workflow-1 is completed "
