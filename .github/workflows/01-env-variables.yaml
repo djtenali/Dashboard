@@ -1,0 +1,15 @@
+name: 01-env-variables
+on:
+    workflow_dispatch:
+env:
+    ENVIRONMENT: "dev"
+    APP_NAME: djtenali
+jobs:
+    env-demo:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: Print variables
+          run: |
+            echo "Printing Environmental Variables"
+            echo " Application name is : $APP_NAME"
+            echo " Environment is : $ENVIRONMENT"
