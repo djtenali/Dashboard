@@ -15,4 +15,4 @@ jobs:
             ls -R
         - name: Give me the repo name
           run: |
-            echo "Repository name: https://github.com/${{ github.repository}}.git"
+            echo "Repository name: https/github.com/${{ github.repository}}.git"

@@ -5,4 +5,12 @@ jobs:
     manual-setup:
         runs-on: ubuntu-latest
         steps:
-        - name:
+        - name: Manually Cloning the repo
+          run: |
+            echo "Cloning the repository manually"
+            git clone https/github.com/${{ github.repository}}.git .
+            ls -la
+            echo "==============================="
+            echo "Print working directory"
+            pwd
+         
