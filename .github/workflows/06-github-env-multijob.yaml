@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
 jobs:
     build-env-job:
-        runs-on: ububntu-latest
+        runs-on: ubuntu-latest
         steps: 
         - name: Set Env variables
           run: |
