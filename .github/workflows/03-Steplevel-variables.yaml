@@ -1,0 +1,49 @@
+name: 03-Steplevel-variables
+on:
+    workflow_dispatch
+jobs:
+  Dev-job:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: dev
+      APP_NAME: djtenali-dev-app
+    steps:
+    - name: Print joblevel Variables
+      run: |
+        echo "Printing Environmental Variables"
+        echo "Application name is: $APP_NAME"
+        echo "Environment is: $ENVIRONMENT"
+    - name: Print steplevel variables
+      env: 
+        APP_VERSION: "1.0.0"
+      run: |
+        echo "Printing steplevel variables"
+        echo "Application version is: $APP_VERSION"
+        echo "Appplication name is: $APP_NAME"
+        echo " Environment is: $ENVIRONMENT"
+  Prod-job:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: prod
+      APP_NAME: djtenali-prod-app
+    steps:
+    - name: Print joblevel Variables
+      run: |
+        echo "Printing Environmental Variables"
+        echo "Application name is: $APP_NAME"
+        echo "Environment is: $ENVIRONMENT"
+    - name: Print steplevel variables
+      env: 
+        APP_VERSION: "1.0.0"
+      run: |
+        echo "Printing steplevel variables"
+        echo "Application version is: $APP_VERSION"
+        echo "Appplication name is: $APP_NAME"
+        echo " Environment is: $ENVIRONMENT"
+           
+
+
+
+
+
+
