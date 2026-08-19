@@ -16,7 +16,7 @@ on:
     - reopened
    workflow_dispatch:
 jobs:
-    #-------------------jJob 1: Test--------------------
+    #-------------------Job 1: Test--------------------
     test: # job-id > this can be later used if i want to refer
       name: Run Tests
       runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
             name: surefire-reports
             path: target/surefire-reports/
             retention-days: 7
-       #-------------------jJob 1: Test-------------------- 
+       #-------------------Job 2: build and package-------------------- 
     build:
       name: Build and Package
       runs-on: ubuntu-latest
