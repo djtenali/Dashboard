@@ -13,4 +13,10 @@ jobs:
             distribution: temurin
             java-version: '21'
         - run: java --version
+        - name: Verify Java installation
+          run: |
+            java -version
+            echo "JAVA_HOME : $JAVA_HOME"
+        - name: Build the project
+          run: mvn package -DskipTests
         
