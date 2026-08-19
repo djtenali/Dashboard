@@ -1,6 +1,6 @@
 name: List of file availability
 on:
-  workflow_dispatch:
+ workflow_dispatch:
 jobs:
     List-files:
         runs-on: ubuntu-latest
@@ -13,3 +13,6 @@ jobs:
           run: |
             echo " List of files in the repository"
             ls -R
+        - name: Give me the repo name
+          run: |
+            echo "Repository name: https://github.com/${{ github.repository}}.git"
