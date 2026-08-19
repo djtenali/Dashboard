@@ -8,7 +8,7 @@ jobs:
         - name: Manually Cloning the repo
           run: |
             echo "Cloning the repository manually:"
-            git clone https:/github.com/${{ github.repository}}.git .
+            git clone https:/github.com/${{ github.repository}}.git 
             echo "List of files in the repository after cloning"
             ls -la
             echo "==============================="
